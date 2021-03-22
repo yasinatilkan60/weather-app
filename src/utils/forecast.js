@@ -1,4 +1,8 @@
 const request = require("request")
+const dotenv = require("dotenv")
+dotenv.config()
+let forecast_api_key = process.env.WEATHERSTACK_API_KEY
+
 
 function translate(text) {
   if (text === "Partly cloudy") return "Parçalı bulutlu"
@@ -6,11 +10,14 @@ function translate(text) {
   else if (text === "Sunny") return "Güneşli"
   else if (text === "Light snow") return "Hafif karlı"
   else if (text === "Light rain shower") return "Hafif yağmurlu"
+  else if (text === "Light Rain Shower, Thunderstorm In Vicinity") return "Hafif yağmur sağanağı, çevresinde fırtına"
   else if (text === "Patchy rain possible") return "Parçalı yağmur ihtimali"
   else if (text === "Light Rain And Snow Shower")
     return "Hafif yağmur ve kar sağnağı"
   else if (text === "Mist") return "Sisli"
   else if (text === "Light Rain Shower") return "Hafif yağmurlu"
+  else if (text === "Moderate or heavy rain with thunder") return "Gök gürültülü, orta veya şiddetli yağmurlu"
+  else if (text === "Light Rain With Thunderstorm") return "Fırtınalı Hafif Yağmur"
   else {
     return text
   }
@@ -18,7 +25,7 @@ function translate(text) {
 
 const forecast = (latitude, longitude, callback) => {
   const url =
-    "http://api.weatherstack.com/current?access_key=7b9c280408789cb2f7042be4f77d66fd&query=" +
+    "http://api.weatherstack.com/current?access_key="+forecast_api_key+"&query=" +
     latitude +
     "," +
     longitude;
@@ -34,9 +41,9 @@ const forecast = (latitude, longitude, callback) => {
         description +
           ". Anlık sıcaklık: " +
           body.current.temperature +
-          " C. Hissedilen sıcaklık: " +
+          " °C. Hissedilen sıcaklık: " +
           body.current.feelslike +
-          " C"
+          " °C. Nem oranı: %" + body.current.humidity+"."
       )
     }
   })
