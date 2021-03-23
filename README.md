@@ -2,6 +2,10 @@
 
 Girilecek lokasyon bilgisine göre hava durumuna ait kısa metin bilgisi, anlık olarak sıcaklık, hissedilen sıcaklık ve nem oranı gösterilmektedir.
 
+Uygulumaya [buradan] (https://havadurumu-uygulama.herokuapp.com/) erişebilir ve test edebilirsiniz.
+
+Proje İngilizce alfabe uyumludur. Örneğin; İstanbul için doğru arama "Istanbul" ya da "istanbul" şeklinde olmalıdır.
+
 ## Proje Hakkında
 
 Projede lokasyonun enlem ve boylam bilgisini elde etmek için Mapbox API, hava durumu için Weatherstack API kullanılmıştır. Projenin çalıştırılması için aşağıdaki adımlar gerçekleştirilmelidir.

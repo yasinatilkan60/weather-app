@@ -10,6 +10,7 @@ function translate(text) {
   else if (text === "Sunny") return "Güneşli"
   else if (text === "Light snow") return "Hafif karlı"
   else if (text === "Rain Shower") return "Hafif yağmurlu"
+  else if (text === "Moderate rain") return "Orta yağışlı"
   else if (text === "Light Rain Shower, Thunderstorm In Vicinity") return "Hafif yağmur sağanağı, çevresinde fırtına"
   else if (text === "Patchy rain possible") return "Parçalı yağmur ihtimali"
   else if (text === "Light Rain And Snow Shower")
