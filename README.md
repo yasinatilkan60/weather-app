@@ -2,8 +2,6 @@
 
 Girilecek lokasyon bilgisine göre hava durumuna ait kısa metin bilgisi, anlık olarak sıcaklık, hissedilen sıcaklık ve nem oranı gösterilmektedir.
 
-Uygulumaya https://havadurumu-uygulama.herokuapp.com/ adresinden erişebilir ve test edebilirsiniz.
-
 Proje İngilizce alfabe uyumludur. Örneğin; İstanbul için doğru arama "Istanbul" ya da "istanbul" şeklinde olmalıdır.
 
 ## Proje Hakkında
